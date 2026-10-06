@@ -1,0 +1,29 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Node.js / React / Next.js
+node_modules/
+dist/
+build/
+.npm/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+
+# C / C++ Compiled Binaries
+*.o
+*.out
+*.exe
+
+# Environment Variables (Secrets)
+.env
+.env.local
+.env.development.local
+
+# VS Code Specific
+.vscode/
