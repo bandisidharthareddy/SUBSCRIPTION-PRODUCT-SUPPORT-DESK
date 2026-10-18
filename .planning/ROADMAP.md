@@ -6,7 +6,7 @@ This roadmap defines the implementation journey for the Subscription Product Sup
 
 ## Phases
 
-- [ ] **Phase 1: Backend Core, Security, Agent Workflows & Test Suite** - Modular Express architecture, multi-tenant RBAC, version-aware RAG, evidence-led AI tools, ticket lifecycles, and automated acceptance tests.
+- [x] **Phase 1: Backend Core, Security, Agent Workflows & Test Suite** - Modular Express architecture, multi-tenant RBAC, version-aware RAG, evidence-led AI tools, ticket lifecycles, and automated acceptance tests.
 - [ ] **Phase 2: Frontend React Portal & Client-Side Workflows** - Modular React UI components for Help Center, Ticket Timeline, Investigation Chat, Specialist Queue, and Knowledge Operations.
 
 ---
@@ -26,11 +26,11 @@ This roadmap defines the implementation journey for the Subscription Product Sup
 **Plans**: 5 plans
 
 Plans:
-- [ ] 01-01: Modular Architecture, Domain Models & Multi-Tenant Membership Schema
-- [ ] 01-02: Authentication, Session Management, CSRF & Role-Based Access Control
-- [ ] 01-03: Version-Aware Knowledge Base, Atlas/Keyword RAG & Purposeful Agent Tools
-- [ ] 01-04: Ticket Lifecycles, Staff Escalation Workflows & Semantic Grouping
-- [ ] 01-05: Reproducible Seed Dataset & Automated Acceptance/Security Test Suite
+- [x] 01-01: Modular Architecture, Domain Models & Multi-Tenant Membership Schema
+- [x] 01-02: Authentication, Session Management, CSRF & Role-Based Access Control
+- [x] 01-03: Version-Aware Knowledge Base, Atlas/Keyword RAG & Purposeful Agent Tools
+- [x] 01-04: Ticket Lifecycles, Staff Escalation Workflows & Semantic Grouping
+- [x] 01-05: Reproducible Seed Dataset & Automated Acceptance/Security Test Suite
 
 ---
 
@@ -54,5 +54,5 @@ Phase 1 → Phase 2
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Backend Core, Security, Agent Workflows & Test Suite | 0/5 | Not started | - |
-| 2. Frontend React Portal & Client-Side Workflows | 0/4 | Not started | - |
+| 1. Backend Core, Security, Agent Workflows & Test Suite | 5/5 | Complete | 2026-10-18 |
+| 2. Frontend React Portal & Client-Side Workflows | 0/4 | Ready to plan | - |
