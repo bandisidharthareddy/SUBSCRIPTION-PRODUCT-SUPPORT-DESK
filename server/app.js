@@ -8,6 +8,8 @@ import { csrfMiddleware } from './middleware/csrf.js';
 import authRoutes from './routes/authRoutes.js';
 import helpRoutes from './routes/helpRoutes.js';
 import agentRoutes from './routes/agentRoutes.js';
+import ticketRoutes from './routes/ticketRoutes.js';
+import staffRoutes from './routes/staffRoutes.js';
 
 export function createApp(options = {}) {
   const app = express();
@@ -47,6 +49,8 @@ export function createApp(options = {}) {
   app.use('/api', authRoutes);
   app.use('/api', helpRoutes);
   app.use('/api', agentRoutes);
+  app.use('/api', ticketRoutes);
+  app.use('/api', staffRoutes);
 
   // Placeholder for subsequent route mounts (help, tickets, agent, staff)
   if (options.extraRoutes) {
