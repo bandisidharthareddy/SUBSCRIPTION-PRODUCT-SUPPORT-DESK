@@ -6,6 +6,8 @@ import helmet from 'helmet';
 import { z } from 'zod';
 import { csrfMiddleware } from './middleware/csrf.js';
 import authRoutes from './routes/authRoutes.js';
+import helpRoutes from './routes/helpRoutes.js';
+import agentRoutes from './routes/agentRoutes.js';
 
 export function createApp(options = {}) {
   const app = express();
@@ -43,6 +45,8 @@ export function createApp(options = {}) {
 
   // Mount feature routes
   app.use('/api', authRoutes);
+  app.use('/api', helpRoutes);
+  app.use('/api', agentRoutes);
 
   // Placeholder for subsequent route mounts (help, tickets, agent, staff)
   if (options.extraRoutes) {
