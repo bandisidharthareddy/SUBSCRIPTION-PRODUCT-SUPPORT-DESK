@@ -10,7 +10,7 @@ const toolRunSchema = new mongoose.Schema({
   orgId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Organization',
-    required: true,
+    default: null,
     index: true
   },
   tool: {

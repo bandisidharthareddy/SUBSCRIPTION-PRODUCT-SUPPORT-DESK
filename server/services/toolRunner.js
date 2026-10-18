@@ -13,13 +13,15 @@ export async function runCheck(ticket, orgId, tool, fn, timeoutMs = 4000) {
   const started = Date.now();
   const ticketId = ticket?._id || null;
   const targetOrgId = orgId || ticket?.orgId;
+  let timer;
 
   try {
-    const timeoutPromise = new Promise((_, reject) =>
-      setTimeout(() => reject(new Error('Tool execution timeout')), timeoutMs)
-    );
+    const timeoutPromise = new Promise((_, reject) => {
+      timer = setTimeout(() => reject(new Error('Tool execution timeout')), timeoutMs);
+    });
 
     const result = await Promise.race([fn(), timeoutPromise]);
+    clearTimeout(timer);
     const durationMs = Date.now() - started;
 
     if (result?.ok === false) {
@@ -44,6 +46,7 @@ export async function runCheck(ticket, orgId, tool, fn, timeoutMs = 4000) {
     });
     return { tool, status: 'success', result };
   } catch (err) {
+    clearTimeout(timer);
     const durationMs = Date.now() - started;
     await ToolRun.create({
       ticketId,

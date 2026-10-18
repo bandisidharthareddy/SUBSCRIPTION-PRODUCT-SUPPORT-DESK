@@ -65,6 +65,9 @@ export function createApp(options = {}) {
         details: err.issues.map(i => ({ path: i.path.join('.'), message: i.message }))
       });
     }
+    if (err.status) {
+      return res.status(err.status).json({ error: err.message });
+    }
     console.error(err);
     res.status(500).json({ error: 'Internal server error' });
   });
@@ -72,4 +75,4 @@ export function createApp(options = {}) {
   return app;
 }
 
-export default createApp();
+export default createApp;

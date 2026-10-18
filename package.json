@@ -9,6 +9,7 @@
     "client:dev": "vite --host 0.0.0.0",
     "start": "node server/index.js",
     "seed": "node server/seed.js",
+    "test": "node --test --test-concurrency=1 test/auth.test.js test/rbac.test.js test/agent.test.js test/tickets.test.js",
     "build": "vite build"
   },
   "dependencies": {
